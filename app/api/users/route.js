@@ -1,3 +1,4 @@
+"use server"
 import { createUserWithAccount,getUserByEmail } from "@/utils/user";
 import { NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
