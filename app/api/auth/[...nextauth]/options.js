@@ -5,7 +5,7 @@ import { PrismaAdapter } from "@auth/prisma-adapter"
 import prisma from "@/lib/prisma"
 import bcrypt from "bcryptjs"
 import { NextResponse } from "next/server"
-import jwt from "jsonwebtoken"
+// import jwt from "jsonwebtoken"
 import 'dotenv/config'
 
 export const options = {
@@ -32,28 +32,28 @@ export const options = {
                             email
                         }
                     })
-                    if (!user) {
-                        throw new Error("No user found with the given email");
-                    }
+                    // if (!user) {
+                    //     throw new Error("No user found with the given email");
+                    // }
                     const hashedPassword = user.password;
                     const passwordMatch = await bcrypt.compare(password, hashedPassword);
                     if (passwordMatch) {
-                        const tokenData = {
-                            name: user.name,
-                            email: user.email,
-                            id: user.id,
-                        };
+                        // const tokenData = {
+                        //     name: user.name,
+                        //     email: user.email,
+                        //     id: user.id,
+                        // };
 
-                        const token = jwt.sign(tokenData, process.env.NEXTAUTH_SECRET, { expiresIn: "1d" });
+                        // const token = jwt.sign(tokenData, process.env.NEXTAUTH_SECRET, { expiresIn: "1d" });
 
-                        // Set cookie
-                        const response = NextResponse.json({ message: "User logged in successfully" });
-                        response.cookies.set("token", token, { httpOnly: true });
+                        // // Set cookie
+                        // const response = NextResponse.json({ message: "User logged in successfully" });
+                        // response.cookies.set("token", token, { httpOnly: true });
 
-                        // Return user data along with token
-                        return { ...user, token };
+                        // // Return user data along with token
+                        // return { ...user, token };
 
-                        // return user
+                        return user
                     } else {
                         return null
                     }
