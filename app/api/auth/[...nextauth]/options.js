@@ -5,7 +5,7 @@ import { PrismaAdapter } from "@auth/prisma-adapter"
 import prisma from "@/lib/prisma"
 import bcrypt from "bcryptjs"
 import { NextResponse } from "next/server"
-// import jwt from "jsonwebtoken"
+import jwt from "jsonwebtoken"
 import 'dotenv/config'
 
 export const options = {
@@ -32,9 +32,9 @@ export const options = {
                             email
                         }
                     })
-                    // if (!user) {
-                    //     throw new Error("No user found with the given email");
-                    // }
+                    if (!user) {
+                        throw new Error("No user found with the given email");
+                    }
                     const hashedPassword = user.password;
                     const passwordMatch = await bcrypt.compare(password, hashedPassword);
                     if (passwordMatch) {
@@ -53,7 +53,7 @@ export const options = {
                         // // Return user data along with token
                         // return { ...user, token };
 
-                        return user
+                        return user 
                     } else {
                         return null
                     }

@@ -14,7 +14,7 @@ const integrationsetting = () => {
         <NavBar />
       <div>
         <div className="flex flex-col lg:flex-row mt-10">
-          <div className="first mx-2 md:mx-[65px] flex flex-col lg:gap-20 w-full lg:w-1/3 mb-3 lg:mb-0">
+          <div className="first m-0 md:mx-[65px] flex flex-col lg:gap-20 w-3/4 lg:w-1/3 mb-3 lg:mb-0">
             <AgentsBoxSmall imgUrl={"Jhon.png"} name={"Jhon."} jobType={"Data Analyst"} />
             <div className='text-white flex flex-col gap-3 lg:gap-7 italic my-5'>
               <Link href={'/playground'} className='text-[#9e9c9cac] text-[15px] md:text-[26px]'>Playground</Link>
@@ -23,7 +23,7 @@ const integrationsetting = () => {
             </div>
           </div>
 
-          <div className="second flex flex-col gap-6 md:gap-12 text-white bg-[#8985851c] p-4 md:p-7 rounded-3xl w-full mx-2 lg:mx-0 lg:mr-[65px] h-full  md:h-[59vh]">
+          <div className="second flex flex-col gap-6 md:gap-12 text-white bg-[#8985851c] p-4 md:p-7 rounded-3xl w-full m-0 lg:mx-0 lg:mr-[65px] h-full  md:h-[59vh]">
             <div className="flex justify-between">
               <h3 className="text-2xl md:text-4xl italic">Integration Setting</h3>
             </div>

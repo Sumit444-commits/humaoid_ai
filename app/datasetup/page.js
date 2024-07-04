@@ -20,7 +20,7 @@ const datasetup = () => {
             </div>
           </div>
 
-          <div className="second flex flex-col gap-5 md:gap-8  text-white bg-[#8985851c] p-4 md:p-7 rounded-3xl w-full mx-4 md:mx-8 lg:mx-5 lg:mr-[65px]">
+          <div className="second flex flex-col gap-5 md:gap-8  text-white bg-[#8985851c] p-4 md:p-7 rounded-3xl w-full m-0 md:mx-8 lg:mx-5 lg:mr-[65px]">
             <div className="flex justify-between">
               <h3 className="text-2xl md:text-4xl italic">Data Setup</h3>
             </div>
